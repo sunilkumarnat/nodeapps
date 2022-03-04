@@ -1,0 +1,77 @@
+<%- include('includes/header') %>
+    <%- include('includes/navbar') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <h5 class="card-title">All Moters</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">View Moters Here ...</h6>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="p-1 table-responsive mb-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Company</th>
+                                            <th scope="col">Model</th>
+                                            <th scope="col">HP</th>
+                                            <th scope="col">RPM</th>
+                                            <th scope="col">Kilo Volt</th>
+                                            <th scope="col">Current Consumption</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% moters.forEach((moter, i) => { %>
+
+                                            <tr>
+                                                <th scope="row">
+                                                    <%= i+1  %>
+                                                </th>
+                                                <td>
+                                                    <%= moter.company  %>
+                                                </td>
+                                                <td>
+                                                    <%= moter.model  %>
+                                                </td>
+                                                <td>
+                                                    <%= moter.hp  %>
+                                                </td>
+                                                <td>
+                                                    <%= moter.rpm  %>
+                                                </td>
+                                                <td>
+                                                    <%= moter.kilovolt  %>
+                                                </td>
+                                                <td>
+                                                    <%= moter.current_consumption  %>
+                                                </td>
+                                                <td>
+                                                    <a href="/edit-moter/<%= moter.id  %>" class="action-btn">
+                                                        <i class="fa fa-edit text-primary"></i>
+                                                    </a>
+                                                    <a href="/delete-moter/<%= moter.id  %>" class="action-btn">
+                                                        <i class="fa fa-trash  text-danger"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <% }) %>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <%- include('includes/footer') %>

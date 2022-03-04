@@ -1,0 +1,33 @@
+</section>
+
+<div class="container-fluid bg-light fixed-bottom">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 m-0 ">
+        <div class="col-md-6 d-flex align-items-center px-3 mb-1">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <img class="bi" width="30" height="30" src="/images/favicon.ico" />
+            </a>
+            <span class="text-muted">©   
+                <% if ((moment().month() + 1) >= 4 )  { %>
+                    <%= moment().format("YYYY") %> - <%= moment().add(1, "year").format("YY") %>               
+                <% } else { %>
+                    <%= moment().subtract(1, "year").format("YYYY") %> - <%= moment().format("YY") %>
+                <% } %>
+                 |  Design and Developed By <a href="https://www.visionworldtech.com" target="_blank"> Vision World Tech. Pvt. Ltd.</a>
+                </span>
+        </div>
+        <ul class="nav col-md-6 justify-content-end list-unstyled d-flex px-3">
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+    </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>

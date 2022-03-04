@@ -1,0 +1,34 @@
+<%- include('includes/header') %>
+    <div class="container text-center align-items-center pt-5 pb-5">
+        <main class="form-signin mt-3 bg-light">
+
+            <form method="POST" action="/login">
+                <img class="mb-4" src="/images/favicon.ico" alt="" width="50" height="50">
+                <h1 class="h3 mb-3 fw-normal">Please LogIn</h1>
+
+                <% if (errors !== '' && errors != null) { %>
+                    <% errors.forEach( (item) => { %>
+                        <div class="alert alert-danger">
+                            <%- item %>
+                        </div>
+                        <% }) %>
+                            <% } %>
+
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-light" name="email" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control bg-light" name="password" id="floatingPassword" placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <button class="w-100 btn btn-lg btn-primary mb-1" type="submit">LogIn</button>
+                                <a href="/forget-password">Forget Password</a>
+                                <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+            </form>
+        </main>
+    </div>
+
+    <%- include('includes/footer') %>

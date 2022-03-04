@@ -1,0 +1,93 @@
+<%- include('includes/header') %>
+    <%- include('includes/navbar') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <h5 class="card-title">All Devices</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">View Devices Here ...</h6>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="p-1 table-responsive mb-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Company</th>
+                                            <th scope="col">Serial No.</th>
+                                            <th scope="col">M.F. Date</th>
+                                            <th scope="col">Device Mobile/IMEI No.</th>
+                                            <th scope="col">Voltage</th>
+                                            <th scope="col">Current</th>
+                                            <th scope="col">Frequency</th>
+                                            <th scope="col">RPM</th>
+                                            <th scope="col">Power</th>
+                                            <th scope="col">Specification</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% devices.forEach((devices, i) => { %>
+
+                                            <tr>
+                                                <th scope="row">
+                                                    <%= i+1  %>
+                                                </th>
+                                                <td>
+                                                    <%= devices.company  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.serial_no  %>
+                                                </td>
+                                                <td>
+                                                    <%= moment(devices.manufacturing_date).format("MMM Do YYYY")  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.device_mobile_imei_no  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.voltage  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.current  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.frequency  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.rpm  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.power  %>
+                                                </td>
+                                                <td>
+                                                    <%= devices.specification  %>
+                                                </td>
+                                                <td>
+                                                    <a href="/edit-device/<%= devices.id  %>" class="action-btn">
+                                                        <i class="fa fa-edit text-primary"></i>
+                                                    </a>
+                                                    <a href="/delete-device/<%= devices.id  %>" class="action-btn">
+                                                        <i class="fa fa-trash  text-danger"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <% }) %>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <%- include('includes/footer') %>

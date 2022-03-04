@@ -1,0 +1,122 @@
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-outline-secondary:hover {
+    color: #FFF !important;
+    border-color: #FFF !important;
+}
+
+a .icon {
+    margin: .5em;
+}
+
+.menu-profile-image {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: unset;
+    right: 0;
+}
+
+.c-header {
+    padding: 10px 20px;
+    background-color: gray;
+    color: #FFF;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.c-body {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+.page-section {
+    padding: 150px 15px 100px 15px;
+}
+
+@media screen and (max-width:1000px) {
+    .page-section {
+        padding: 110px 15px 80px 15px;
+    }
+}
+
+.text-success {
+    color: #94f394 !important;
+}
+
+.text-danger {
+    color: #f39e9e !important;
+}
+
+.text-warning {
+    color: #e9bb66 !important;
+}
+
+.text-info {
+    color: powderblue !important;
+}
+
+.text-primary {
+    color: #bdbdf7 !important;
+}
+
+.text-secondary {
+    color: lightgray !important;
+}
+
+.text-default {
+    color: gray !important;
+}
+
+.action-btn {
+    text-decoration: none;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.profile-logo {
+    max-width: 100px;
+    max-height: 100px;
+}

@@ -1,0 +1,86 @@
+<header class="mb-5 border-bottom bg-light fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/favicon.ico" width="40" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Companies
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/register-company">Register New Company</a></li>
+                                <li><a class="dropdown-item" href="/all-companies">All Companies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Users
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/register-user">Register New User</a></li>
+                                <li><a class="dropdown-item" href="/all-users">All Users</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Devices
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/register-device">Register New Device</a></li>
+                                <li><a class="dropdown-item" href="/register-device-to-company">Register Device To Company</a></li>
+                                <li><a class="dropdown-item" href="/all-devices">All Devices</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Moters
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/register-moter">Register New Moter</a></li>
+                                <li><a class="dropdown-item" href="/all-moters">All Moters</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/images/profile_pics/<%= user.profile_pic %>" height="35px" width="35px" class="menu-profile-image" />
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                                <li class="p-3" style="margin: -0.5rem 0;background-color: lightgray;">
+                                    <h5 class="m-0">Admin</h5>
+                                    <p class="m-0"><%= user.email %></p>
+                                    <p class="m-0">Admin</p>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/account">Account</a></li>
+                                <li><a class="dropdown-item" href="/change-password">Change Password</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+                              </ul>
+                            </li>
+                           
+                          </ul>
+
+                                              
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="page-section">
